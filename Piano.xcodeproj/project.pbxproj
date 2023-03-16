@@ -11,6 +11,8 @@
 		6938F28E29C1331600DC5876 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938F28D29C1331600DC5876 /* ContentView.swift */; };
 		6938F29029C1331800DC5876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6938F28F29C1331800DC5876 /* Assets.xcassets */; };
 		6938F29329C1331800DC5876 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6938F29229C1331800DC5876 /* Preview Assets.xcassets */; };
+		6938F29C29C24DA800DC5876 /* piano-mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F29B29C24DA800DC5876 /* piano-mp3 */; };
+		6938F29E29C3A55800DC5876 /* A0 copy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F29D29C3A55800DC5876 /* A0 copy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6938F28D29C1331600DC5876 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6938F28F29C1331800DC5876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6938F29229C1331800DC5876 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6938F29B29C24DA800DC5876 /* piano-mp3 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "piano-mp3"; path = "../../../Downloads/piano-mp3-master/piano-mp3"; sourceTree = "<group>"; };
+		6938F29D29C3A55800DC5876 /* A0 copy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "A0 copy.mp3"; path = "../../../../Downloads/piano-mp3-master/piano-mp3/A0 copy.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 		6938F27F29C1331600DC5876 = {
 			isa = PBXGroup;
 			children = (
+				6938F29B29C24DA800DC5876 /* piano-mp3 */,
 				6938F28A29C1331600DC5876 /* Piano */,
 				6938F28929C1331600DC5876 /* Products */,
 			);
@@ -51,6 +56,7 @@
 		6938F28A29C1331600DC5876 /* Piano */ = {
 			isa = PBXGroup;
 			children = (
+				6938F29D29C3A55800DC5876 /* A0 copy.mp3 */,
 				6938F28B29C1331600DC5876 /* PianoApp.swift */,
 				6938F28D29C1331600DC5876 /* ContentView.swift */,
 				6938F28F29C1331800DC5876 /* Assets.xcassets */,
@@ -126,6 +132,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6938F29329C1331800DC5876 /* Preview Assets.xcassets in Resources */,
+				6938F29E29C3A55800DC5876 /* A0 copy.mp3 in Resources */,
+				6938F29C29C24DA800DC5876 /* piano-mp3 in Resources */,
 				6938F29029C1331800DC5876 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
