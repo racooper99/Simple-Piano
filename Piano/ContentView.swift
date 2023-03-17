@@ -18,32 +18,42 @@ struct ContentView: View {
                 PianoSurface()
                 HStack {
                     ZStack {
-                        Keyboard(isPressed: true)
+                        Keyboard(key: 0)
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.black)
-                            .frame(width: 75, height: 250)
+                            .frame(width: 50, height: 200)
                             .offset(x: 30, y: -100)
                         
                         
                     } //: ZStack
-                    Keyboard(isPressed: true)
+                    Keyboard(key: 1)
                     ZStack {
-                        Keyboard(isPressed: true)
+                        Keyboard(key: 2)
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.black)
-                            .frame(width: 75, height: 250)
+                            .frame(width: 50, height: 200)
                             .offset(x: 30, y: -100)
                         
                     } //: ZStack
                     ZStack {
-                        Keyboard(isPressed: true)
+                        Keyboard(key: 3)
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.black)
-                            .frame(width: 75, height: 250)
+                            .frame(width: 50, height: 200)
                             .offset(x: 30, y: -100)
                         
                     } //: ZStack
-                    Keyboard(isPressed: true)
+                    Keyboard(key: 4)
+                    ZStack {
+                        Keyboard(key: 5)
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.black)
+                            .frame(width: 50, height: 200)
+                            .offset(x: 30, y: -100)
+                        
+                    } //: ZStack
+                    Keyboard(key: 6)
+
                 } //: HStack
                 .padding()
                 .foregroundColor(.white)
@@ -72,11 +82,17 @@ struct ContentView: View {
         
     } //: some View
 } //: ContentView
+
+// Logic for Keyboard View.
 var player: AVAudioPlayer!
 struct Keyboard: View {
-    @State var isPressed: Bool
-    func playSound() {
-           let url = Bundle.main.url(forResource: "A0 copy", withExtension: "mp3")
+    @State var key: Int
+    // Function that plays MP3 file located within directory.  Defines sounds to be played.
+    //Parameter URL depends on the key being pressed.
+    func playSound(key: Int) {
+            let notesArray = ["C3","D3","E3","F3","G3","A3","B3","C4"]
+            let note = notesArray[key]
+           let url = Bundle.main.url(forResource: note, withExtension: "mp3")
         guard url != nil else {
             return
         }
@@ -91,34 +107,35 @@ struct Keyboard: View {
     var body: some View {
         ZStack {
             Button(action: {
-                self.playSound()
-            }) { // does this need brackets?
+                self.playSound(key: key)
+            }) { // Display White Piano Key Instead of Button Text
                 PianoKey()
-            }
+                }
 
         } //: ZStack
-        .onTapGesture {
-            isPressed = !isPressed
-        } //: onTapGesture
     } //: some View
 } //: Keyboard View
 
+
+// Black Surface that serves as the background for the keys.
 struct PianoSurface: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 25)
     } //: some View
 } //: PianoSurface View
 
+
+// White Rounded Rectangles that serve as Piano Keys.
 struct PianoKey: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .fill(.white)
-            .frame(width: 50, height: 300)
+            .frame(width: 30, height: 200)
     } //: some View
 } //: PianoKey View
 
 
-
+// Content Previwer.
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
