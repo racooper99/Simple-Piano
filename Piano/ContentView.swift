@@ -19,38 +19,21 @@ struct ContentView: View {
                 HStack {
                     ZStack {
                         Keyboard(key: 0)
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .frame(width: 50, height: 200)
-                            .offset(x: 30, y: -100)
-                        
-                        
+                        BlackKeyboard(key: 0)
                     } //: ZStack
                     Keyboard(key: 1)
                     ZStack {
                         Keyboard(key: 2)
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .frame(width: 50, height: 200)
-                            .offset(x: 30, y: -100)
-                        
+                        BlackKeyboard(key: 1)
                     } //: ZStack
                     ZStack {
                         Keyboard(key: 3)
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .frame(width: 50, height: 200)
-                            .offset(x: 30, y: -100)
-                        
+                        BlackKeyboard(key: 2)
                     } //: ZStack
                     Keyboard(key: 4)
                     ZStack {
                         Keyboard(key: 5)
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .frame(width: 50, height: 200)
-                            .offset(x: 30, y: -100)
-                        
+                        BlackKeyboard(key: 3)
                     } //: ZStack
                     Keyboard(key: 6)
 
@@ -83,16 +66,16 @@ struct ContentView: View {
     } //: some View
 } //: ContentView
 
-// Logic for Keyboard View.
+// Logic for White Keyboard View.
 var player: AVAudioPlayer!
 struct Keyboard: View {
-    @State var key: Int
-    // Function that plays MP3 file located within directory.  Defines sounds to be played.
+    var key: Int
+    // Function that plays MP3 file located within directory.  Defines note to be played.
     //Parameter URL depends on the key being pressed.
     func playSound(key: Int) {
             let notesArray = ["C3","D3","E3","F3","G3","A3","B3","C4"]
             let note = notesArray[key]
-           let url = Bundle.main.url(forResource: note, withExtension: "mp3")
+            let url = Bundle.main.url(forResource: note, withExtension: "mp3")
         guard url != nil else {
             return
         }
@@ -103,7 +86,7 @@ struct Keyboard: View {
         catch {
             print("\(error)")
         }
-    }
+    } //: playSound
     var body: some View {
         ZStack {
             Button(action: {
@@ -116,6 +99,39 @@ struct Keyboard: View {
     } //: some View
 } //: Keyboard View
 
+
+// Logic for Black Keyboard View.
+
+struct BlackKeyboard: View {
+    var key: Int
+    // Function that plays MP3 file located within directory.  Defines note to be played.
+    //Parameter URL depends on the key being pressed.
+    func playSound(key: Int) {
+            let notesArray = ["Db3","Eb3","Gb3","Ab3","Bb3"]
+            let note = notesArray[key]
+            let url = Bundle.main.url(forResource: note, withExtension: "mp3")
+        guard url != nil else {
+            return
+        }
+        do {
+            player = try AVAudioPlayer(contentsOf: url!)
+            player?.play()
+        }
+        catch {
+            print("\(error)")
+        }
+    } //: playSound
+    var body: some View {
+        ZStack {
+            Button(action: {
+                self.playSound(key: key)
+            }) { // Display Black Piano Key Instead of Button Text
+                FlatKey()
+                }
+
+        } //: ZStack
+    } //: some View
+} //: Keyboard View
 
 // Black Surface that serves as the background for the keys.
 struct PianoSurface: View {
@@ -134,6 +150,15 @@ struct PianoKey: View {
     } //: some View
 } //: PianoKey View
 
+// Black Rounded Rectangles that serve as Sharp and Flat Piano Keys.
+struct FlatKey: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20)
+            .fill(.black)
+            .frame(width: 50, height: 200)
+            .offset(x: 30, y: -100)
+    }
+}
 
 // Content Previwer.
 struct ContentView_Previews: PreviewProvider {

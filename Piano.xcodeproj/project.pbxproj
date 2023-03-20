@@ -19,6 +19,11 @@
 		6938F2B929C4FEEB00DC5876 /* A3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2B229C4FEEA00DC5876 /* A3.mp3 */; };
 		6938F2BA29C4FEEB00DC5876 /* F3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2B329C4FEEB00DC5876 /* F3.mp3 */; };
 		6938F2BC29C5012900DC5876 /* D3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2BB29C5012900DC5876 /* D3.mp3 */; };
+		6938F2BE29C506F800DC5876 /* Db3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2BD29C506F800DC5876 /* Db3.mp3 */; };
+		6938F2C029C5070900DC5876 /* Bb3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2BF29C5070900DC5876 /* Bb3.mp3 */; };
+		6938F2C229C5072300DC5876 /* Ab3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2C129C5072300DC5876 /* Ab3.mp3 */; };
+		6938F2C429C5077400DC5876 /* Eb3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2C329C5077400DC5876 /* Eb3.mp3 */; };
+		6938F2C629C5078800DC5876 /* Gb3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6938F2C529C5078800DC5876 /* Gb3.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		6938F2B229C4FEEA00DC5876 /* A3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A3.mp3; sourceTree = "<group>"; };
 		6938F2B329C4FEEB00DC5876 /* F3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F3.mp3; sourceTree = "<group>"; };
 		6938F2BB29C5012900DC5876 /* D3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = D3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/D3.mp3"; sourceTree = "<group>"; };
+		6938F2BD29C506F800DC5876 /* Db3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Db3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/Db3.mp3"; sourceTree = "<group>"; };
+		6938F2BF29C5070900DC5876 /* Bb3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Bb3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/Bb3.mp3"; sourceTree = "<group>"; };
+		6938F2C129C5072300DC5876 /* Ab3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ab3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/Ab3.mp3"; sourceTree = "<group>"; };
+		6938F2C329C5077400DC5876 /* Eb3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Eb3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/Eb3.mp3"; sourceTree = "<group>"; };
+		6938F2C529C5078800DC5876 /* Gb3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Gb3.mp3; path = "../../../Downloads/piano-mp3-master 2/piano-mp3/Gb3.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,11 @@
 		6938F27F29C1331600DC5876 = {
 			isa = PBXGroup;
 			children = (
+				6938F2C529C5078800DC5876 /* Gb3.mp3 */,
+				6938F2C129C5072300DC5876 /* Ab3.mp3 */,
+				6938F2C329C5077400DC5876 /* Eb3.mp3 */,
+				6938F2BF29C5070900DC5876 /* Bb3.mp3 */,
+				6938F2BD29C506F800DC5876 /* Db3.mp3 */,
 				6938F2BB29C5012900DC5876 /* D3.mp3 */,
 				6938F2B229C4FEEA00DC5876 /* A3.mp3 */,
 				6938F2B029C4FEEA00DC5876 /* B3.mp3 */,
@@ -149,6 +164,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6938F2C629C5078800DC5876 /* Gb3.mp3 in Resources */,
+				6938F2C029C5070900DC5876 /* Bb3.mp3 in Resources */,
 				6938F2B929C4FEEB00DC5876 /* A3.mp3 in Resources */,
 				6938F2B729C4FEEB00DC5876 /* B3.mp3 in Resources */,
 				6938F2B529C4FEEB00DC5876 /* E3.mp3 in Resources */,
@@ -157,8 +174,11 @@
 				6938F2BC29C5012900DC5876 /* D3.mp3 in Resources */,
 				6938F29029C1331800DC5876 /* Assets.xcassets in Resources */,
 				6938F2B629C4FEEB00DC5876 /* G3.mp3 in Resources */,
+				6938F2C429C5077400DC5876 /* Eb3.mp3 in Resources */,
 				6938F2B429C4FEEB00DC5876 /* C4.mp3 in Resources */,
 				6938F2BA29C4FEEB00DC5876 /* F3.mp3 in Resources */,
+				6938F2C229C5072300DC5876 /* Ab3.mp3 in Resources */,
+				6938F2BE29C506F800DC5876 /* Db3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
